@@ -35,14 +35,36 @@
             color: black;
             text-align: center;
         }
+        .btn1:hover{
+            display: none;
+        }
+        #bloc2{
+            display: none;
+            margin-inline: auto;
+        }
+        .active{
+            display: block;
+        }
     </style>
 
     <div class="wrapper">
         <h1>Would you be my Valentine ❤️?</h1>
         <div class="bloc">
             <button class="btn1">NO</button>
-            <button class="btn2">Yes</button>
+            <button class="btn2" id="btn2">Yes</button>
+             <div id="bloc2">
+                <h2>MERCI MON AMOUUUR ❤️❤️❤️❤️❤️</h2>
+                <p>Je t'aime de tout mon coeur, tu es ma femme, mon avenir !</p>
+             </div>
         </div>
+       
     </div>
+    <script>
+        let btn2 = document.getElementById("btn2");
+        let bloc2 = document.getElementById("bloc2");
+        btn2.addEventListener("click", () => {
+            bloc2.classList.add('active');
+        })
+    </script>
 </body>
 </html>
