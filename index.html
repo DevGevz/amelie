@@ -59,11 +59,21 @@
        
     </div>
     <script>
-        let btn2 = document.getElementById("btn2");
+       let btn2 = document.getElementById("btn2");
         let bloc2 = document.getElementById("bloc2");
+        
         btn2.addEventListener("click", () => {
+        
+            // Affiche le bloc
             bloc2.classList.add('active');
-        })
+        
+            // Après 5 secondes (5000 millisecondes)
+            setTimeout(() => {
+                bloc2.classList.remove('active');
+            }, 5000);
+        
+        });
+
     </script>
 </body>
 </html>
